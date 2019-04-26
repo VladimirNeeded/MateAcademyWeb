@@ -24,7 +24,8 @@ public class SignInServlet extends HttpServlet {
 
     private static boolean check(Client client) {
         for (int i = 0; i < Storage.getSize(); i++) {
-            if ((Storage.getClient(i).getLogin().equals(client.getLogin()) && Storage.getClient(i).getPassword().equals(client.getPassword()))) {
+            if ((Storage.getClient(i).getLogin().equals(client.getLogin()) &&
+                 Storage.getClient(i).getPassword().equals(client.getPassword()))) {
                 return true;
             }
         }
