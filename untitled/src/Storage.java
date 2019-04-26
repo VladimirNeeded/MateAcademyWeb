@@ -12,7 +12,7 @@ public class Storage {
         return storageOfClients.get(index);
     }
 
-    public static List<String> logins (){
+    public static List<String> logins() {
         List<String> logins = new ArrayList<>();
         for (int i = 0; i < storageOfClients.size(); i++){
             logins.add(storageOfClients.get(i).getLogin());
@@ -22,9 +22,5 @@ public class Storage {
 
         public static void addClient(String log, String pass) {
             storageOfClients.add(new Client(log, pass));
-    }
-
-    public static int getSize(){
-        return storageOfClients.size();
     }
 }

@@ -18,7 +18,7 @@ public class RegistrationServlet extends HttpServlet {
         String password = req.getParameter("password");
         if (Storage.logins().contains(login)){
             out.print("This login already use, try again");
-        }else {
+        } else {
             Storage.addClient(login, password);
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("/Sign_In.jsp");
             requestDispatcher.forward(req, resp);
